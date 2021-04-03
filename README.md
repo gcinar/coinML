@@ -9,6 +9,11 @@ docker buil --no-cache -t dev-container .
 ```
 
 In Visual Studio Code, you can attach to the ```dev-container``` image using Remote- Containers extension.
+Once in the container install the dependencies using the following command at the root level of the repo:
+
+```
+poetry install
+```
 
 Run the tests:
 
