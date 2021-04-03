@@ -9,6 +9,7 @@ license = "MIT License"
 python = "^3.9"
 pandas = "^1.2.3"
 numpy = "^1.20.2"
+requests = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"
