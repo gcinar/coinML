@@ -1,9 +1,11 @@
 FROM python:3.9
 
-WORKDIR /code
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 ENV PATH="~/.poetry/bin:${PATH}"
-RUN git clone https://github.com/gcinar/coinML.git
 
-WORKDIR /code/coinML
+#this dockerfile is intended to be used with VSCode + Remote-Containers extension
+#due to .devcontainer/.devcontainer.json VSCode will prompt the developer 
+#to open the current folder in a remote container. This will create a attached volume
+#which is your repo under /workspaces/coinML
+WORKDIR /workspaces/coinML
 RUN poetry install
